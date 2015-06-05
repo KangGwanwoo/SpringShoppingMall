@@ -1,39 +1,41 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ page contentType="text/html; charset=UTF-8" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	
-	<link rel="stylesheet" type="text/css" href="index_login.css">
-
-	</style>
-	</head>
-	<body>
-		<header>쇼핑몰</header>
-		<nav class="nav">
-			<span id="nav_sayHello">님 안녕하세요.</span>
-			<div class = "nav_bC"><button id="put_on_record">상품등록</button></div>
-			<div class = "nav_bC"><button id="put_on_record">로그아웃</button></div>
-		</nav>
-		<section class = "product_section">
-			<header id="prodect_section_attribute">
-				<div>상품이미지</div>
-				<div>상품명</div>
-				<div>가격</div>
-				<div>판매자</div>
-			</header>
-				<article id="product_section_wrap">
-					<div class="product_section_products">
-						<img class="product_section_products_img"/ alt="product_img">
-						<span  class="product_section_products_name" > 품질 좋은 상품</span>
-						<span class="product_section_products_price" > 15,000</span>
-						<span class="product_section_products_seller" > (주)제주대학교</span>
-					</div>
-				</article>
-			<div id="product_section_paging"></div>
-		</section>
-		<footer></footer>
-	</body>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>사용자 등록</title>
+	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<div id="Header">
+		사용자 관리
+	</div>
+ 	<div id="Menu">
+ 		${user.name} 님 안녕하세요.
+		<a href="product_regist.jeju">상품등록</a><br/>
+		<a href="#">로그아웃</a>
+	</div>
+	<div id="Content">
+		<table>
+			<caption>강관우 쇼핑몰</caption>
+			<thead>
+				<tr>
+					<th>상품명</th>
+					<th>가격</th>
+					<th>판매자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${productList}" var="product">
+				<tr>
+					<td><a herf="info?id=${product.id}">${product.title}</a></td>
+					<td>${product.price}</td>
+					<td>${product.provider}</td>
+				</tr>
+				</c:forEach>
+			</tbody>	
+		</table>
+	</div>
+</body>
 </html>

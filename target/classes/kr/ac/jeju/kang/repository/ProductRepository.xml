@@ -7,10 +7,10 @@
 			id, title, price, provider
 		from product
 	</select>
-<!--  	<insert id="insert" parameterType="User">
-		insert into userinfo(id,name,password) values(#{id}, #{name}, #{password})
+	<insert id="insert" parameterType="Product">
+		insert into product(title,price,provider) values(#{title}, #{price}, #{provider})
 	</insert>
-	<delete id="delete">
+<!--  	<delete id="delete">
 		delete from userinfo where id = #{id}
 	</delete>
 	<select id="findById" resultType="User">

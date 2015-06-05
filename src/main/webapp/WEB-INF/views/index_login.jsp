@@ -4,17 +4,17 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>사용자 등록</title>
+	<title>관우 쇼핑몰</title>
 	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 	<div id="Header">
-		사용자 관리
+		관우 쇼핑몰
 	</div>
-<!-- 	<div id="Menu">
-		<a href="list">목록보기</a><br/>
-		<a href="create.jeju">등록하기</a>
-	</div> -->
+ 	<div id="Menu">
+		<a href="sign_In_form.jeju">회원가입</a><br/>
+		<a href="loginform.jeju">로그인</a>
+	</div>
 	<div id="Content">
 		<table>
 			<caption>강관우 쇼핑몰</caption>
