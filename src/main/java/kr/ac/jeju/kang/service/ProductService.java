@@ -1,0 +1,11 @@
+package kr.ac.jeju.kang.service;
+
+import java.util.List;
+
+import kr.ac.jeju.kang.model.Product;
+
+public interface ProductService {
+
+	List<Product> list();
+
+}
