@@ -10,4 +10,6 @@ public interface ProductService {
 
 	void save(Product product);
 
+	List<Product> productModify(Product product);
+
 }

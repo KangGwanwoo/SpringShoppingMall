@@ -30,6 +30,13 @@ public class ProductServiceImpl implements ProductService{
 		productRepository.insert(product);
 	}
 
+	@Override
+	public List<Product> productModify(Product product) {
+		// TODO Auto-generated method stub
+		productRepository.update(product);
+		return productRepository.findAll();
+	}
+
 	
 	
 	

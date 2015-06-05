@@ -13,4 +13,6 @@ public interface ProductRepository {
 
 	void insert(Product product);
 
+	void update(Product product);
+
 }

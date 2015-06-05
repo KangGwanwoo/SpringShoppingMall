@@ -1,21 +1,31 @@
 package kr.ac.jeju.kang.service;
 
+import java.util.List;
+
+import kr.ac.jeju.kang.model.Product;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ProductServiceTest {
-//	@Autowired
-//	private GoodsService goodsService;
-//	@Test
-//	public void list() {
-//		List<Goods> goodsList = goodsService.list();
-//		Assert.assertTrue(goodsList.size() > 0);
-//		for(Goods goods : goodsList) {
-//			if(goods.id == 1) {
-//				Assert.assertEquals("abc", goods.getTitle());
-//				
-//			}
-//		}
-//	}
+	@Autowired
+	private ProductService productService;
+	@Test
+	public void list() {
+		Product product = new Product();
+		product.setId(1);
+		product.setTitle("hello");
+		product.setProvider("jeju");
+		product.setDescription("new description");
+		
+		List<Product> goodsList = productService.productModify(product);
+		Assert.assertTrue(goodsList.size() > 0);
+		for(Product goods : goodsList) {
+			if(goods.getId() == 1) {
+				Assert.assertEquals("description", goods.getDescription());
+				
+			}
+		}
+	}
 }

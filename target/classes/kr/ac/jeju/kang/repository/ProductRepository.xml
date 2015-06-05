@@ -18,8 +18,8 @@
 			id, name, password	
 		from userinfo where id = #{id}
 	</select>
-
-	<update id="update" parameterType="User"> 
-		update userinfo set name=#{name}, password=#{password} where id = #{id}
-	</update> -->
+-->
+	<update id="update" parameterType="Product"> 
+		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{proudctId}
+	</update> 
 </mapper>

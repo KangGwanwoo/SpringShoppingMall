@@ -17,11 +17,11 @@
 				</p>
 				<p>
 					<label>가격</label>
-					<input type="name" name="price" />
+					<input type="text" name="price" />
 				</p>
 				<p>
 					<label>판매자</label>
-					<input type="password" name="provider" />
+					<input type="text" name="provider" />
 				</p>
 				<p>
 					<input type="submit" value="등록" />
