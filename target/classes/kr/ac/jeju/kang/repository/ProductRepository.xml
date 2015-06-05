@@ -20,6 +20,6 @@
 	</select>
 -->
 	<update id="update" parameterType="Product"> 
-		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{proudctId}
+		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
 	</update> 
 </mapper>

@@ -11,7 +11,6 @@
 		<form action="productModify" method="post">
 			<fieldset>
 				<legend>상품 수정</legend>
-				<input type = "hidden" name="productId" value="${param.productId}"/>
 				<p>
 					<label>상품명</label>
 					<input type="text" name="title" />
@@ -28,6 +27,7 @@
 					<label>상품상세설명</label>
 					<input type="text" name="description" />
 				</p>
+				<input type = "hidden" name="id" value="${param.productId}" />
 				<p>
 					<input type="submit" value="수정" />
 				</p>
