@@ -10,8 +10,8 @@
 	<body>
 		<header class="product_header">
 			<span id="product_header_name">${product.title}</span>
-			<button class ="product_header_bt" id="bt_list">목록</button>
-			<button class ="product_header_bt" id="bt_modify">수정</button>
+			<span><a href ="/index_login.jeju">목록</a></span>
+			<span><a href ="/product_renew.jeju?id=${product.id}">수정</a></span>
 		</header>
 		<section class = "product_info_section">
 			<img id="product_info_section_img" src="" alt="상품이미지">

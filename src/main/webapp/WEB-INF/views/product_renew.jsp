@@ -13,21 +13,21 @@
 				<legend>상품 수정</legend>
 				<p>
 					<label>상품명</label>
-					<input type="text" name="title" />
+					<input type="text" name="title" value="${product.title}"/>
 				</p>
 				<p>
 					<label>가격</label>
-					<input type="text" name="price" />
+					<input type="text" name="price" value="${product.price}"/>
 				</p>
 				<p>
 					<label>판매자</label>
-					<input type="text" name="provider" />
+					<input type="text" name="provider" value="${product.provider}"/>
 				</p>
 				<p>
 					<label>상품상세설명</label>
-					<input type="text" name="description" />
+					<input type="text" name="description" value="${product.description}" />
 				</p>
-				<input type = "hidden" name="id" value="${param.productId}" />
+				<input type = "hidden" name="id" value="${product.id}" />
 				<p>
 					<input type="submit" value="수정" />
 				</p>
