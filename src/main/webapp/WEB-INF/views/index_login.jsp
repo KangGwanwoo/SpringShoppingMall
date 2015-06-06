@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ page session="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,7 +13,7 @@
 		사용자 관리
 	</div>
  	<div id="Menu">
- 		${user.name} 님 안녕하세요.
+ 		${sessionScope.userLoginInfo.name} 님 안녕하세요.
 		<a href="product_regist.jeju">상품등록</a><br/>
 		<a href="#">로그아웃</a>
 	</div>
