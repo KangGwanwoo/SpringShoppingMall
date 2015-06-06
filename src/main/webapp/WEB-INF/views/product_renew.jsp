@@ -30,6 +30,7 @@
 				<input type = "hidden" name="id" value="${product.id}" />
 				<p>
 					<input type="submit" value="수정" />
+					<a href="productDelete.jeju?id=${product.id}"><input type="button" value="삭제 "/></a>
 				</p>
 			</fieldset>
 		</form>

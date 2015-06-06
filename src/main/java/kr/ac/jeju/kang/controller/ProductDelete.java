@@ -1,24 +1,25 @@
 package kr.ac.jeju.kang.controller;
 
-import java.util.List;
-
 import kr.ac.jeju.kang.model.Product;
 import kr.ac.jeju.kang.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/index_nonelogin")
-public class ProductList {
-	
+@RequestMapping("/productDelete")
+public class ProductDelete {
 	@Autowired
 	private ProductService productService;
-	
+
 	@RequestMapping
-	public List<Product> list(){
-		return productService.list();
+	public String productModify(@RequestParam("id") int id) {
+		productService.productDelete(id);
+		return "redirect:index_nonelogin.jeju";
 	}
-	
 }
+
+// productDelete.jeju?id=${product.id}

@@ -4,16 +4,17 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>관우 쇼핑몰</title>
+	<title>사용자 등록</title>
 	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 	<div id="Header">
-		관우 쇼핑몰
+		사용자 관리
 	</div>
  	<div id="Menu">
-		<a href="sign_In_form.jeju">회원가입</a><br/>
-		<a href="loginform.jeju">로그인</a>
+ 		${user.name} 님 안녕하세요.
+		<a href="product_regist.jeju">상품등록</a><br/>
+		<a href="#">로그아웃</a>
 	</div>
 	<div id="Content">
 		<table>
@@ -28,7 +29,7 @@
 			<tbody>
 				<c:forEach items="${productList}" var="product">
 				<tr>
-					<td><a href="product_info.jeju?id=${product.id}">${product.title}</a></td>
+					<td><a herf="info?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
 				</tr>

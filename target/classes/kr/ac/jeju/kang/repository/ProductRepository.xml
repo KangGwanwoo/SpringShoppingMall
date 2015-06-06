@@ -10,10 +10,10 @@
 	<insert id="insert" parameterType="Product">
 		insert into product(title,price,provider) values(#{title}, #{price}, #{provider})
 	</insert>
-<!--  	<delete id="delete">
-		delete from userinfo where id = #{id}
+	<delete id="delete">
+		delete from product where id = #{id}
 	</delete>
-	-->
+	
 	<select id="findById" resultType="Product">
 		select 
 			*

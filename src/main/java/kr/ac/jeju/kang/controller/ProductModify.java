@@ -17,6 +17,6 @@ public class ProductModify {
 	@RequestMapping
 	public String productModify(@ModelAttribute Product product) {
 		productService.productModify(product);
-		return "redirect:index_login";
+		return "redirect:index_nonelogin.jeju";
 	}
 }

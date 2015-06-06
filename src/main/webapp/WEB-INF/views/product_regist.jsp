@@ -24,6 +24,10 @@
 					<input type="text" name="provider" />
 				</p>
 				<p>
+					<label>상품상세설명</label>
+					<input type="text" name="description" />
+				</p>
+				<p>
 					<input type="submit" value="등록" />
 				</p>
 			</fieldset>

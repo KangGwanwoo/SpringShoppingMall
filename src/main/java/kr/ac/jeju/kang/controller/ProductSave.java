@@ -16,6 +16,6 @@ public class ProductSave {
 	@RequestMapping
 	public String save(@ModelAttribute Product product){
 		productService.save(product);
-		return "redirect:index_login";
+		return "redirect:index_nonelogin";
 	}
 }
