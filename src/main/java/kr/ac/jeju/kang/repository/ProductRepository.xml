@@ -13,12 +13,13 @@
 <!--  	<delete id="delete">
 		delete from userinfo where id = #{id}
 	</delete>
-	<select id="findById" resultType="User">
+	-->
+	<select id="findById" resultType="Product">
 		select 
-			id, name, password	
-		from userinfo where id = #{id}
+			*
+		from product where id = #{id}
 	</select>
--->
+
 	<update id="update" parameterType="Product"> 
 		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
 	</update> 

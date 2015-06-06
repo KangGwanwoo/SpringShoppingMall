@@ -12,4 +12,6 @@ public interface ProductService {
 
 	List<Product> productModify(Product product);
 
+	Product get(int id);
+
 }

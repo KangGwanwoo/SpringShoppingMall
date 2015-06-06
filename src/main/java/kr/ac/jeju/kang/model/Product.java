@@ -1,6 +1,5 @@
 package kr.ac.jeju.kang.model;
 
-import java.util.List;
 
 public class Product {
 	private Integer id;
