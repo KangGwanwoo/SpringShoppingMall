@@ -15,9 +15,9 @@
 		사용자 관리
 	</div>
  	<div id="Menu">
- 		${sessionScope.userLoginInfo.name} 님 안녕하세요.
+ 		${sessionScope.userLoginInfo.name} 님 안녕하세요.</br>
 		<a href="product_regist.jeju">상품등록</a><br/>
-		<a href="#">로그아웃</a>
+		<a href="logOut.jeju">로그아웃</a>
 	</div>
 	<div id="Content">
 		<table>

@@ -23,7 +23,7 @@ public class ProductList {
 	
 	
 	@RequestMapping("/index")
-	public ModelAndView login(User user, HttpSession session, HttpServletRequest request){
+	public ModelAndView confirmLogin(User user, HttpSession session, HttpServletRequest request){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("redirect:index_nonelogin.jeju");
 
