@@ -18,7 +18,7 @@ public class ProductDelete {
 	@RequestMapping
 	public String productModify(@RequestParam("id") int id) {
 		productService.productDelete(id);
-		return "redirect:index_nonelogin.jeju";
+		return "redirect:index.jeju";
 	}
 }
 

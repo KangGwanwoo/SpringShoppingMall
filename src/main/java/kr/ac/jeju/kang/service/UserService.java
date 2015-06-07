@@ -6,4 +6,6 @@ public interface UserService {
 
 	User login(User user);
 
+	void singIn(User user);
+
 }

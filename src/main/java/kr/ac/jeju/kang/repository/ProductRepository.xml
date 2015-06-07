@@ -8,7 +8,7 @@
 		from product
 	</select>
 	<insert id="insert" parameterType="Product">
-		insert into product(title,price,provider) values(#{title}, #{price}, #{provider})
+		insert into product(title,price,provider,description) values(#{title}, #{price}, #{provider}, #{description})
 	</insert>
 	<delete id="delete">
 		delete from product where id = #{id}

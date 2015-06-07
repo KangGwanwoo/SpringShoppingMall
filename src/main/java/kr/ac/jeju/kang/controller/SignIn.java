@@ -1,21 +1,27 @@
 package kr.ac.jeju.kang.controller;
 
-import kr.ac.jeju.kang.model.Product;
-import kr.ac.jeju.kang.service.ProductService;
+import kr.ac.jeju.kang.model.User;
+import kr.ac.jeju.kang.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+
 @Controller
-@RequestMapping("/save")
-public class ProductSave {
+@RequestMapping("/signIn")
+public class SignIn {
 	@Autowired
-	private ProductService productService;
+	private UserService userService;
 	@RequestMapping
-	public String save(@ModelAttribute Product product){
-		productService.save(product);
-		return "redirect:index";
+	public String signIn(@ModelAttribute User user){
+		userService.singIn(user);
+		return "redirect:loginform.jeju";
 	}
+
 }
+
+
+	

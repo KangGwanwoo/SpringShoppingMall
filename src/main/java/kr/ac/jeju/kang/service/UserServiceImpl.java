@@ -16,4 +16,10 @@ public class UserServiceImpl implements UserService{
 		return userRepository.findById(user);
 	}
 
+	@Override
+	public void singIn(User user) {
+		// TODO Auto-generated method stub
+		userRepository.registUser(user);
+	}
+
 }

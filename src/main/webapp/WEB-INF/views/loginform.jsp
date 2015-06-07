@@ -6,6 +6,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>로그인</title>
 	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
+	<%
+		//request scopte 에 담긴 에러 메시지 얻어오기
+		String errMsg = (String)request.getAttribute("errMsg");
+		if(errMsg==null){
+			errMsg="";
+		}
+	%>
 </head>
 <body>
 
@@ -23,6 +30,9 @@
 				</p>
 				<p>
 					<input type="submit" value="로그인" />
+				</p>
+				<p id="error">
+					${sessionScope.errMsg}
 				</p>
 			</fieldset>
 		</form>

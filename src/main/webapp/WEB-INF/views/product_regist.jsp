@@ -21,7 +21,7 @@
 				</p>
 				<p>
 					<label>판매자</label>
-					<input type="text" name="provider" />
+					<input type="text" name="provider" value="${sessionScope.userLoginInfo.userId}" readonly/>
 				</p>
 				<p>
 					<label>상품상세설명</label>

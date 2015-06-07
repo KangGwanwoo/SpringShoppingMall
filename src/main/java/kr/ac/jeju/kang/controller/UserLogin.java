@@ -21,22 +21,21 @@ public class UserLogin {
 	@Autowired
 	private UserService userService;
 	
-	
-	@RequestMapping("login")
-	    public String login() {
-	        return "login";
-	}
-	
+
 	
 	@RequestMapping("/userlogin")
 	public ModelAndView login(User user, HttpSession session, HttpServletRequest request){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("redirect:index_login.jeju");
+		mav.setViewName("redirect:index.jeju");
 		
 		User loginUser = userService.login(user);
 		
 		if(loginUser!=null){
 			session.setAttribute("userLoginInfo", loginUser);
+			mav.setViewName("redirect:index_login.jeju");
+		}else{
+			session.setAttribute("errMsg", "아이디 또는 비밃번호가 잘못 되었어요!");
+			mav.setViewName("redirect:loginform.jeju");
 		}
 		return mav;
 	}

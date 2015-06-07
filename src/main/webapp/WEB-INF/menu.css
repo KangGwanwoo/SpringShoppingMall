@@ -173,3 +173,8 @@ tr.alt td {
 tr.over td,tr:hover td {
 	background: #bcd4ec;
 }
+
+#error{
+	color:red;
+	font-size:10pt;
+}

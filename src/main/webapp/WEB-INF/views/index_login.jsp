@@ -9,6 +9,8 @@
 	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
+
+	
 	<div id="Header">
 		사용자 관리
 	</div>
@@ -30,7 +32,7 @@
 			<tbody>
 				<c:forEach items="${productList}" var="product">
 				<tr>
-					<td><a herf="info?id=${product.id}">${product.title}</a></td>
+					<td><a href="product_info.jeju?id=${product.id}">${product.title}</a></td>
 					<td>${product.price}</td>
 					<td>${product.provider}</td>
 				</tr>

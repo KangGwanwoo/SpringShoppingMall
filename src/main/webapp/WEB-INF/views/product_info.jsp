@@ -17,19 +17,19 @@
 				</p>
 				<p>
 					<label>상품명</label>
-					<input type="text" name="title" value="${product.title}" />
+					<input type="text" name="title" value="${product.title}"  readonly/>
 				</p>
 				<p>
 					<label>가격</label>
-					<input type="text" name="price" value="${product.price}"/>
+					<input type="text" name="price" value="${product.price}" readonly/>
 				</p>
 				<p>
 					<label>판매자</label>
-					<input type="text" name="provider" value="${product.provider}"/>
+					<input type="text" name="provider" value="${product.provider}" readonly/>
 				</p>
 				<p>
 					<label>상품상세설명</label>
-					<input type="text" name="description" value="${product.description}"/>
+					<input type="text" name="description" value="${product.description}" readonly/>
 				</p>
 				<p>
 					<input type="submit" value="구매" />

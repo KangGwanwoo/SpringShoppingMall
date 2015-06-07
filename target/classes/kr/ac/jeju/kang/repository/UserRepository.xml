@@ -9,7 +9,9 @@
 			*
 		from userInfo where userId = #{userId} and password=#{password}
 	</select>
-
+	<insert id="registUser" parameterType="User">
+		insert into userInfo(userId,name,password,authority,phoneNumber) values(#{userId}, #{name}, #{password}, #{authority},#{phoneNumber})
+	</insert>
 <!-- 	<update id="update" parameterType="Product"> 
 		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
 	</update>
