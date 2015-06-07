@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.jeju.kang.repository.SoldProductRepository">
+	<insert id="insert" parameterType="SoldProduct">
+		insert into soldProduct() values(#{userId},#{productId},#{title}, #{price}, #{provider})
+	</insert>
+	<delete id="delete">
+		delete from product where id = #{id}
+	</delete>
+	
+	<select id="findById" resultType="Product">
+		select 
+			*
+		from product where id = #{id}
+	</select>
+
+	<update id="update" parameterType="Product"> 
+		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
+	</update> 
+</mapper>

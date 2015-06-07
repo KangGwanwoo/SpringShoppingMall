@@ -19,6 +19,10 @@
 				</c:if>
 				</p>
 				<p>
+					<input type = "hidden" name="productId" value="${product.id}" />
+					<input type = "hidden" name="userId" value="${sessionScope.userLoginInfo.userId}" />
+				</p>
+				<p>
 					<label>상품명</label>
 					<input type="text" name="title" value="${product.title}"  readonly/>
 				</p>
@@ -36,7 +40,6 @@
 				</p>
 				<p>
 					<input type="submit" value="구매" />
-					
 				</p>
 			</fieldset>
 		</form>
