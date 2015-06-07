@@ -9,6 +9,12 @@
 			*
 		from userInfo where userId = #{userId} and password=#{password}
 	</select>
+	
+	<select id="findId" resultType="User">
+		select 
+			*
+		from userInfo where userId = #{userId}
+	</select>
 	<insert id="registUser" parameterType="User">
 		insert into userInfo(userId,name,password,authority,phoneNumber) values(#{userId}, #{name}, #{password}, #{authority},#{phoneNumber})
 	</insert>

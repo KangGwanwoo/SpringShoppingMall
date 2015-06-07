@@ -13,4 +13,7 @@ public interface UserRepository {
 
 	public void registUser(User user);
 
+
+	public User findId(User user);
+
 }

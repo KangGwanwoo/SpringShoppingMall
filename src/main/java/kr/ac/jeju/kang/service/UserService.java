@@ -8,4 +8,6 @@ public interface UserService {
 
 	void singIn(User user);
 
+	User findId(User user);
+
 }

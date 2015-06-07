@@ -16,6 +16,9 @@
 				<legend>회원가입</legend>
 				<p>
 					<label>아이디</label> <input type="text" name="userId" />
+					<div id="error">
+					${sessionScope.errMsg}
+					</div>
 				</p>
 				<p>
 					<label>이름</label> <input type="text" name="name" />

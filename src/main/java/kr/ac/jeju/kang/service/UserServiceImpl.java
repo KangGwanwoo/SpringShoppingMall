@@ -22,4 +22,10 @@ public class UserServiceImpl implements UserService{
 		userRepository.registUser(user);
 	}
 
+	@Override
+	public User findId(User user) {
+		// TODO Auto-generated method stub
+		return userRepository.findId(user);
+	}
+
 }

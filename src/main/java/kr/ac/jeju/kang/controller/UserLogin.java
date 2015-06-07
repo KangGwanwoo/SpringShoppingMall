@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping
 public class UserLogin {
+	
 	@Autowired
 	private UserService userService;
 	
