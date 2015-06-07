@@ -6,16 +6,16 @@
 		insert into soldProduct() values(#{userId},#{productId},#{title}, #{price}, #{provider})
 	</insert>
 	<delete id="delete">
-		delete from product where id = #{id}
+		delete from soldProduct where id = #{id}
 	</delete>
 	
-	<select id="findById" resultType="Product">
+	<select id="findById" resultType="SoldProduct" >
 		select 
 			*
-		from product where id = #{id}
+		from soldProduct where userId = #{userId}
 	</select>
 
 	<update id="update" parameterType="Product"> 
-		update product set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
+		update soldProduct set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
 	</update> 
 </mapper>

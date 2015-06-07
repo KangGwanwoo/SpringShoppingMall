@@ -5,24 +5,23 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>사용자 등록</title>
+	<title>구매목록</title>
 	<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 
 	
 	<div id="Header">
-		사용자 관리
+		구매목록
 	</div>
  	<div id="Menu">
  		${sessionScope.userLoginInfo.name} 님 안녕하세요.</br>
-		<a href="product_regist.jeju">상품등록</a><br/>
-		<a href="purchaseList.jeju">내 구매목록</a><br/>
+		<a href="index_login.jeju">상품목록</a><br/>
 		<a href="logOut.jeju">로그아웃</a>
 	</div>
 	<div id="Content">
 		<table>
-			<caption>강관우 쇼핑몰</caption>
+			<caption>구매 목록 입니다. </caption>
 			<thead>
 				<tr>
 					<th>상품명</th>
@@ -31,11 +30,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${productList}" var="product">
+				<c:forEach items="${soldProductList}" var="soldProduct">
 				<tr>
-					<td><a href="product_info.jeju?id=${product.id}">${product.title}</a></td>
-					<td>${product.price}</td>
-					<td>${product.provider}</td>
+					<td><a href="product_info.jeju?id=${soldProduct.productId}">${soldProduct.title}</a></td>
+					<td>${soldProduct.price}</td>
+					<td>${soldProduct.provider}</td>
 				</tr>
 				</c:forEach>
 			</tbody>	
