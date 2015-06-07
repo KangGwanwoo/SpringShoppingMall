@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="Content">
-		<form action="buyProduct" method="post">
+		<form  method="post" action="buyProduct">
 			<fieldset>
 				<legend>상품 정보</legend>
 				<p>
@@ -40,6 +40,7 @@
 				</p>
 				<p>
 					<input type="submit" value="구매" />
+					<input type="submit" formaction="addShoppingBasket" value="장바구니"/>
 				</p>
 			</fieldset>
 		</form>

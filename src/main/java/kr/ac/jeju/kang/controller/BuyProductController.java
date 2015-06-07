@@ -18,7 +18,7 @@ public class BuyProductController {
 	
 	
 	@RequestMapping
-	public String buyProdcut(SoldProduct soldProduct){
+	public String buyProduct(SoldProduct soldProduct){
 		buyService.addList(soldProduct);
 		productService.productDelete(soldProduct.getProductId());
 		return "redirect:index";
