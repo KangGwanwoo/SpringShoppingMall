@@ -36,7 +36,7 @@ public class PageController {
 		}catch(Exception e){
 		}
 		int rownum = productService.getRow();
-		int pageNum = rownum/15+1;
+		int pageNum = rownum/5+1;
 		
 		if(rownum%15 == 0){
 			pageNum--;

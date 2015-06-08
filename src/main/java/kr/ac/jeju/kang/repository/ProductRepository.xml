@@ -10,7 +10,7 @@
 	<select id="findByPage" resultType="Product" >
 		select 
 			id, title, price, provider
-		from product LIMIT 15 OFFSET #{page}
+		from product LIMIT 5 OFFSET #{page}
 	</select>
 	<select id="countRow" resultType="int" >
 		select 

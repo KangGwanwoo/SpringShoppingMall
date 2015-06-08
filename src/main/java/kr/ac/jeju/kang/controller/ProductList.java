@@ -48,7 +48,7 @@ public class ProductList {
 			startPage = (seq-1)/5*5+1;
 			endPage =startPage+5-1;
 			if(seq!=1){
-				int temp = (seq-1)*15;
+				int temp = (seq-1)*5;
 				page = temp;
 			}else if(seq==1){
 				page = 0;
@@ -56,7 +56,7 @@ public class ProductList {
 		}catch(Exception e){
 		}
 		int rownum = productService.getRow();
-		int pageNum = rownum/15+1;
+		int pageNum = rownum/5+1;
 		
 		if(rownum%15 == 0){
 			pageNum--;
@@ -85,7 +85,7 @@ public class ProductList {
 			startPage = (seq-1)/5*5+1;
 			endPage =startPage+5-1;
 			if(seq!=1){
-				int temp = (seq-1)*15;
+				int temp = (seq-1)*5;
 				page = temp;
 			}else if(seq==1){
 				page = 0;
@@ -93,7 +93,7 @@ public class ProductList {
 		}catch(Exception e){
 		}
 		int rownum = productService.getRow();
-		int pageNum = rownum/15+1;
+		int pageNum = rownum/5+1;
 		
 		if(rownum%15 == 0){
 			pageNum--;

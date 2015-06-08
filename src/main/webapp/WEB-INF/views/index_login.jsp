@@ -55,7 +55,7 @@
 				<span><a href="index.jeju?seq=${i}">${i}</a></span>
 				</c:forEach>
 				<c:if test="${end%5==0 && pageNum>end}">
-				<span><a href="index.jeju?seq${end+1}">&raquo;</a></span>
+				<span><a href="index.jeju?seq=${end+1}">&raquo;</a></span>
 				</c:if>
 				</td>
 				<td></td>
