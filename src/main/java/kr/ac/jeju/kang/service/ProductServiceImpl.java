@@ -49,5 +49,17 @@ public class ProductServiceImpl implements ProductService{
 		productRepository.delete(id);
 	}
 
+	@Override
+	public int getRow() {
+		// TODO Auto-generated method stub
+		return productRepository.countRow();
+	}
+
+	@Override
+	public List<Product> listByPage(int page) {
+		// TODO Auto-generated method stub
+		return productRepository.findByPage(page);
+	}
+
 	
 }

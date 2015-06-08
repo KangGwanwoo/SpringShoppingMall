@@ -141,7 +141,7 @@ input {
 
 table {
 	border-collapse: collapse;
-	width: 50%;
+	width : 100%;
 	margin: 24px;
 	font-size: 1.1em;
 }
@@ -157,13 +157,13 @@ th {
 }
 
 td {
-	padding: 6px 11px;
+	padding: 6px 3px;
 	border-bottom: 1px solid #95bce2;
 	vertical-align: top;
 }
 
 td * {
-	padding: 6px 11px;
+	padding: 6px 3px;
 }
 
 tr.alt td {
@@ -172,4 +172,9 @@ tr.alt td {
 
 tr.over td,tr:hover td {
 	background: #bcd4ec;
+}
+
+#error{
+	color:red;
+	font-size:10pt;
 }

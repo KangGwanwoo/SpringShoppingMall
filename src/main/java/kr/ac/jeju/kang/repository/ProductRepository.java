@@ -19,4 +19,8 @@ public interface ProductRepository {
 
 	void delete(int id);
 
+	int countRow();
+
+	List<Product> findByPage(int page);
+
 }

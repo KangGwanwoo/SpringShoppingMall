@@ -16,4 +16,8 @@ public interface ProductService {
 
 	void productDelete(int id);
 
+	int getRow();
+
+	List<Product> listByPage(int page);
+
 }

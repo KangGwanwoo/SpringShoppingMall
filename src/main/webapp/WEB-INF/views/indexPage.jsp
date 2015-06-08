@@ -41,7 +41,7 @@
 					<td>${product.provider}</td>
 				</tr>
 				</c:forEach>
-			</tbody>	
+			</tbody>
 			<tfoot>
 				<tr>
 				<td></td>
@@ -49,19 +49,20 @@
 				<c:if test="${start-1==0}">
 				</c:if>
 				<c:if test="${start-1!=0}">
-				<span><a href="index.jeju?seq=${start-1}">&laquo;</a></span>
+				<span><a href="indexPage.jeju?seq=${start-1}">&laquo;</a></span>
 				</c:if>
 				<c:forEach var="i" begin="${start}" end="${end}">
-				<span><a href="index.jeju?seq=${i}">${i}</a></span>
+				<span><a href="indexPage.jeju?seq=${i}">${i}</a></span>
 				</c:forEach>
 				<c:if test="${end%5==0 && pageNum>end}">
-				<span><a href="index.jeju?seq${end+1}">&raquo;</a></span>
+				<span><a href="indexPage.jeju?seq${end+1}">&raquo;</a></span>
 				</c:if>
 				</td>
 				<td></td>
 				</tr>
 			</tfoot>	
 		</table>
+
 	</div>
 </body>
 </html>
