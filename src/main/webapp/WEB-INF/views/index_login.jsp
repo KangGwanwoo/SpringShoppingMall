@@ -12,12 +12,15 @@
 
 	
 	<div id="Header">
-		사용자 관리
+		쇼핑몰 솔루션
 	</div>
  	<div id="Menu">
  		${sessionScope.userLoginInfo.name} 님 안녕하세요.</br>
-		<a href="product_regist.jeju">상품등록</a><br/>
+ 		<c:if test="${sessionScope.userLoginInfo.authority=='seller'}">
+  				<a href="product_regist.jeju">상품등록</a><br/>
+		</c:if>
 		<a href="purchaseList.jeju">내 구매목록</a><br/>
+		<a href="shoppingBasketList.jeju">장바구니</a><br/>
 		<a href="logOut.jeju">로그아웃</a>
 	</div>
 	<div id="Content">

@@ -5,17 +5,17 @@
 	<insert id="insert" parameterType="ShoppingBasket">
 		insert into ShoppingBasket() values(#{userId},#{productId},#{title}, #{price}, #{provider})
 	</insert>
-	<delete id="delete">
-		delete from soldProduct where id = #{id}
+	<delete id="delete" parameterType="map">
+		delete from shoppingBasket where userId=#{userId} and productId=#{productId}
 	</delete>
 	
-	<select id="findById" resultType="SoldProduct" >
+	<select id="findById" resultType="ShoppingBasket" >
 		select 
 			*
-		from soldProduct where userId = #{userId}
+		from shoppingBasket where userId = #{userId}
 	</select>
 
 	<update id="update" parameterType="Product"> 
-		update soldProduct set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id = #{id}
+		update shoppingBasket set title=#{title}, price=#{price}, provider=#{provider},description=#{description} where id=#{id}
 	</update> 
 </mapper>

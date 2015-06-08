@@ -13,7 +13,7 @@
 			<fieldset>
 				<legend>상품 정보</legend>
 				<p>
-				<a href="/index_nonelogin.jeju"><input type="button" value="목록 "/></a>
+				<a href="/index.jeju"><input type="button" value="목록 "/></a>
 				<c:if test="${sessionScope.userLoginInfo.userId==product.provider}">
   				<a href="/product_renew.jeju?id=${product.id}"><input type="button" value="수정 "/></a>
 				</c:if>

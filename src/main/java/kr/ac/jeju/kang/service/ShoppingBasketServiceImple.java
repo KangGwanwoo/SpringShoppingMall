@@ -1,5 +1,7 @@
 package kr.ac.jeju.kang.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,18 @@ public class ShoppingBasketServiceImple implements ShoppingBasketService{
 	public void addList(ShoppingBasket shoppingBasket) {
 		// TODO Auto-generated method stub
 		shoppingBasketRepository.insert(shoppingBasket);
+	}
+
+	@Override
+	public List<ShoppingBasket> list(String userId) {
+		// TODO Auto-generated method stub
+		return shoppingBasketRepository.findById(userId);
+	}
+
+	@Override
+	public void productDelete(String userId,int productId) {
+		// TODO Auto-generated method stub
+		shoppingBasketRepository.delete(userId,productId);
 	}
 
 }
