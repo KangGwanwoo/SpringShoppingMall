@@ -21,7 +21,7 @@ public class BuyProductController {
 	public String buyProduct(SoldProduct soldProduct){
 		buyService.addList(soldProduct);
 		productService.productDelete(soldProduct.getProductId());
-		return "redirect:index";
+		return "redirect:index.jeju";
 	}
 	
 }

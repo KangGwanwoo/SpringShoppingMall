@@ -17,6 +17,6 @@ public class AddShoppingBasketController {
 	@RequestMapping
 	public String addShoppingBasket(ShoppingBasket shoppingBasket){
 		shoppingBasketService.addList(shoppingBasket);
-		return "redirect:index";
+		return "redirect:index.jeju";
 	}
 }

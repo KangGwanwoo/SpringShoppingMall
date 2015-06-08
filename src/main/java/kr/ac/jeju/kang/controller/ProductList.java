@@ -39,7 +39,7 @@ public class ProductList {
 	}
 
 	@RequestMapping("/index_nonelogin")
-	public List<Product> list(@RequestParam("seq") int seq, Model model) {
+	public List<Product> list(@RequestParam(value = "seq", defaultValue = "1") int seq, Model model) {
 		model.addAttribute("pnum", seq);
 		int startPage = 0;
 		int endPage = 0;
@@ -76,7 +76,7 @@ public class ProductList {
 	}
 		
 	@RequestMapping("/index_login")
-	public List<Product> list2(@RequestParam("seq") int seq, Model model) {
+	public List<Product> list2(@RequestParam(value = "seq", defaultValue = "1") int seq, Model model) {
 		model.addAttribute("pnum", seq);
 		int startPage = 0;
 		int endPage = 0;

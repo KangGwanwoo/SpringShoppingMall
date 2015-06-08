@@ -16,6 +16,6 @@ public class LogoutController {
 	@RequestMapping
 	public String logOut(HttpSession session){
 		session.invalidate();
-		return "redirect:index";
+		return "redirect:index.jeju";
 	}
 }
